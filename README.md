@@ -4,7 +4,19 @@ Cleanux is a modern, high-performance system cleaning utility built with [Tauri 
 
 ## Screenshots
 
-here are screenshots of this project
+<details>
+  <summary>Spoiler</summary>
+  <h3>Dashboard page</h3>
+  <img src="imgREADME/dashboard.png" alt="Dashboard">
+  <h3>Cleaner page</h3>
+  <img src="imgREADME/cleaner.png" alt="Cleaner">
+  <h3>Large Files page</h3>
+  <img src="imgREADME/large-files.png" alt="Large Files">
+  <h3>System page</h3>
+  <img src="imgREADME/system.png" alt="System">
+  <h3>Settings page</h3>
+  <img src="imgREADME/settings.png" alt="Settings">
+</details>
 
 ## Features
 
@@ -18,7 +30,7 @@ here are screenshots of this project
 
 ## Tech Stack
 
-- **Frontend**: Angular v20 (Standalone Components, Signals, Control Flow)
+- **Frontend**: Angular v21 (Standalone Components, Signals, Control Flow)
 - **Backend**: Rust (Tauri v2, Tokio)
 - **Styling**: TailwindCSS v4
 - **Icons**: Material Icons
@@ -27,7 +39,7 @@ here are screenshots of this project
 
 #### Checking the installed tools to launch the project
 
-First make sure you have Node.js and Bun installed.
+First make sure you have Node.js installed.
 To do this, open a command prompt or terminal and type the following commands:
 
 ```bash
@@ -35,32 +47,24 @@ node -v
 ```
 
 ```bash
+npm -v
+```
+
+If you are using the bun package manager, then run this command:
+
+```bash
 bun -v
-```
-
-If Bun is not installed, you can install it from the [official website](https://bun.sh/). Here are the installation commands for different systems:
-
-**For macOS and Linux:**
-
-```bash
-curl -fsSL https://bun.sh/install | bash
-```
-
-**For Windows (using PowerShell):**
-
-```powershell
-irm bun.sh/install.ps1 | iex
-```
-
-**For all platforms using npm:**
-
-```bash
-npm install -g bun
 ```
 
 #### Installation dependencies
 
 After that, go to the folder with this project and run the following command:
+
+```bash
+npm install
+```
+
+If you are using the bun package manager, then run this command:
 
 ```bash
 bun install
@@ -79,7 +83,13 @@ If you get an error instead of a version, it means that you don't have a Rust co
 
 ## Usage
 
-After installing the dependencies, use the following command to run in development mode:
+After installing the dependencies, use the following command to run, depending on the package manager you are using:
+
+```bash
+npm run tauri dev
+```
+
+Or
 
 ```bash
 bun run tauri dev
@@ -93,16 +103,16 @@ This project includes optimizations to reduce build times and ensure high perfor
 
 ```bash
 # Build desktop application
-bun run tauri build
+bun run tauri:build
 
 # Clean all build artifacts
-cargo clean
+bun run build:clean
 ```
 
 ### Key Optimizations
 
 1. **Incremental Compilation**: Rust code uses incremental compilation to avoid recompiling unchanged code.
-2. **Modern Frontend Features**: Utilizes Angular v20 Signals and Control Flow for optimized change detection and performance.
+2. **Modern Frontend Features**: Utilizes Angular v21 Signals and Control Flow for optimized change detection and performance.
 3. **Rust Backend Security**: Critical operations like system cleaning and service management use `pkexec` for secure, system-native administrative authorization.
 
 ## Authors
