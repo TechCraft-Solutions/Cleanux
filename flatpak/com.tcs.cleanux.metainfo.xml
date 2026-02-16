@@ -53,6 +53,17 @@
   </provides>
 
   <releases>
+    <release version="0.1.1" date="2026-02-17">
+      <description>
+        <p>Fixed build system compatibility and enhanced project documentation:</p>
+        <ul>
+          <li>Synchronized Tauri NPM packages and Rust crate versions to 2.10.1 to resolve build mismatches.</li>
+          <li>Added automated Flatpak build workflow using GitHub Actions.</li>
+          <li>Integrated comprehensive screenshot galleries and improved README documentation.</li>
+          <li>Optimized AppImage bundling by explicitly configuring square icons in Tauri settings.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-02-16">
       <description>
         <p>Initial release of Cleanux - A comprehensive system cleaning and optimization utility.</p>
