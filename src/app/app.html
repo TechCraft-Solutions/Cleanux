@@ -1,0 +1,13 @@
+<div
+  class="flex min-h-screen transition-colors duration-300 text-black dark:text-white"
+  [class.bg-gray-50]="!isDarkMode()"
+  [class.bg-gray-950]="isDarkMode()"
+>
+  <app-sidebar [isDarkMode]="isDarkMode()" (darkToggle)="toggleDarkMode()"> </app-sidebar>
+
+  <main class="flex-1 min-h-screen overflow-y-auto relative">
+    <div class="max-w-7xl mx-auto">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
