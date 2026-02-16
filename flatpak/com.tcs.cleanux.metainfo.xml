@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.tcs.cleanux</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <name>Cleanux</name>
+  <summary>A modern system cleaner and optimizer</summary>
+
+  <developer id="com.tcs">
+    <name>TechCraft Solutions</name>
+  </developer>
+
+  <description>
+    <p>Cleanux is a powerful system cleaning utility designed to keep your Linux system running smoothly.</p>
+    <p>Features include:</p>
+    <ul>
+      <li>Cache cleaning</li>
+      <li>Trash management</li>
+      <li>Log file optimization</li>
+      <li>Large file detection</li>
+      <li>System service management</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">com.tcs.cleanux.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/rusnakdima/Cleanux/main/imgREADME/home.png</image>
+      <caption>Dashboard view with system overview</caption>
+    </screenshot>
+  </screenshots>
+
+  <categories>
+    <category>Utility</category>
+    <category>System</category>
+  </categories>
+
+  <keywords>
+    <keyword>cleaner</keyword>
+    <keyword>optimizer</keyword>
+    <keyword>system</keyword>
+    <keyword>utility</keyword>
+  </keywords>
+
+  <url type="homepage">https://github.com/rusnakdima/Cleanux</url>
+  <url type="bugtracker">https://github.com/rusnakdima/Cleanux/issues</url>
+
+  <provides>
+    <binary>cleanux</binary>
+  </provides>
+
+  <releases>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cleanux
+Comment=A modern system cleaner and optimizer
+Icon=com.tcs.cleanux
+Exec=cleanux
+Terminal=false
+Categories=Utility;System;
+Keywords=cleaner;optimizer;system;
+StartupWMClass=cleanux
+StartupNotify=true

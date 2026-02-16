@@ -1,0 +1,49 @@
+app-id: com.tcs.cleanux
+runtime: org.gnome.Platform
+runtime-version: "48"
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.node22
+command: cleanux
+
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --share=ipc
+  - --share=network
+  - --filesystem=home
+
+modules:
+  - name: cleanux-local
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/node22/bin:/usr/lib/sdk/rust-stable/bin
+    build-commands:
+      # Binary
+      - install -Dm755 src-tauri/target/release/cleanux /app/bin/cleanux
+      # Metadata
+      - install -Dm644 com.tcs.cleanux.desktop /app/share/applications/com.tcs.cleanux.desktop
+      - install -Dm644 com.tcs.cleanux.metainfo.xml /app/share/metainfo/com.tcs.cleanux.metainfo.xml
+      # Icons
+      - |
+        for size in 128x128 256x256; do
+          install -Dm644 src-tauri/icons/icon.png /app/share/icons/hicolor/$size/apps/com.tcs.cleanux.png
+        done
+      - install -Dm644 src-tauri/icons/icon.png /app/share/icons/hicolor/scalable/apps/com.tcs.cleanux.svg
+
+    sources:
+      - type: file
+        path: "com.tcs.cleanux.desktop"
+      - type: file
+        path: "com.tcs.cleanux.metainfo.xml"
+      - type: dir
+        path: "../src-tauri/icons"
+        dest: "src-tauri/icons"
+      - type: dir
+        path: "../src-tauri/target/release"
+        dest: "src-tauri/target/release"
+
+    cleanup:
+      - /share/man
